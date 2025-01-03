@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomeGym.Domian", "DomeGym.Domian", "{9A4B5C32-3507-4206-879E-D5ECFD799D71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomeGym.Domian.Unitests", "DomeGym.Domian.Unitests", "{788C1CAC-7AF7-4896-9598-BDAF5DC77E8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomeGym.Domian.UnitTests", "DomeGym.Domian.UnitTests\DomeGym.Domian.UnitTests.csproj", "{9E238999-5B95-4EA5-BD09-9DE2975A59B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomeGym.Domian", "DomeGym.Domian\DomeGym.Domian.csproj", "{8F6A5266-C2FC-4B8F-8CC9-73FB2559AB96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E238999-5B95-4EA5-BD09-9DE2975A59B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E238999-5B95-4EA5-BD09-9DE2975A59B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E238999-5B95-4EA5-BD09-9DE2975A59B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E238999-5B95-4EA5-BD09-9DE2975A59B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F6A5266-C2FC-4B8F-8CC9-73FB2559AB96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F6A5266-C2FC-4B8F-8CC9-73FB2559AB96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F6A5266-C2FC-4B8F-8CC9-73FB2559AB96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F6A5266-C2FC-4B8F-8CC9-73FB2559AB96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E238999-5B95-4EA5-BD09-9DE2975A59B9} = {788C1CAC-7AF7-4896-9598-BDAF5DC77E8C}
+		{8F6A5266-C2FC-4B8F-8CC9-73FB2559AB96} = {9A4B5C32-3507-4206-879E-D5ECFD799D71}
+	EndGlobalSection
+EndGlobal
