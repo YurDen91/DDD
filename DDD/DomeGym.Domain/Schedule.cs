@@ -12,12 +12,12 @@ public class Schedule
         Guid? id = null)
     {
         _calendar = calendar ?? new();
-        _id = id ?? Guid.NewGuid();
+        _id = id ?? Guid.CreateVersion7();
     }
 
     public static Schedule Empty()
     {
-        return new Schedule(id: Guid.NewGuid());
+        return new Schedule(id: Guid.CreateVersion7());
     }
 
     internal bool CanBookTimeSlot(DateOnly date, TimeRange time)

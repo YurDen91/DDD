@@ -17,7 +17,7 @@ public class Gym
     {
         _maxRooms = maxRooms;
         _subscriptionId = subscriptionId;
-        Id = id ?? Guid.NewGuid();
+        Id = id ?? Guid.CreateVersion7();
     }
 
     public ErrorOr<Success> AddRoom(Room room)

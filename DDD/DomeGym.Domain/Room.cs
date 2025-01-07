@@ -20,7 +20,7 @@ public class Room
         _maxDailySessions = maxDailySessions;
         _gymId = gymId;
         _schedule = schedule ?? Schedule.Empty();
-        Id = id ?? Guid.NewGuid();
+        Id = id ?? Guid.CreateVersion7();
     }
 
     public ErrorOr<Success> ScheduleSession(Session session)

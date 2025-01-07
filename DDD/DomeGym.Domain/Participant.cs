@@ -14,7 +14,7 @@ public class Participant
     public Participant(Guid userId, Guid? id = null)
     {
         _userId = userId;
-        Id = id ?? Guid.NewGuid();
+        Id = id ?? Guid.CreateVersion7();
     }
 
     public ErrorOr<Success> AddToSchedule(Session session)

@@ -16,7 +16,7 @@ public class Trainer
     {
         _userId = userId;
         _schedule = schedule ?? Schedule.Empty();
-        _id = id ?? Guid.NewGuid();
+        _id = id ?? Guid.CreateVersion7();
     }
 
     public ErrorOr<Success> AddSessionToSchedule(Session session)
