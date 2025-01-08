@@ -18,7 +18,7 @@ public class Subscription
         _subscriptionType = subscriptionType;
         _maxGyms = GetMaxGyms();
         _adminId = adminId;
-        _id = id ?? Guid.CreateVersion7();
+        _id = id ?? Guid.NewGuid();
     }
 
     public int GetMaxGyms() => _subscriptionType.Name switch

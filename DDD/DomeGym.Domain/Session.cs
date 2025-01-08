@@ -25,7 +25,7 @@ public class Session
         Time = time;
         _maxParticipants = maxParticipants;
         _trainerId = trainerId;
-        Id = id ?? Guid.CreateVersion7();
+        Id = id ?? Guid.NewGuid();
     }
 
     public ErrorOr<Success> CancelReservation(Participant participant, IDateTimeProvider dateTimeProvider)
