@@ -1,3 +1,5 @@
+using DomeGym.Domain.Common.Entities;
+using DomeGym.Domain.SessionAggregate;
 using ErrorOr;
 
 namespace DomeGym.Domain;

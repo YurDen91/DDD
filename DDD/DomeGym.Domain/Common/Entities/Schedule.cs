@@ -1,6 +1,7 @@
+using DomeGym.Domain.Common.ValueObjects;
 using ErrorOr;
 
-namespace DomeGym.Domain;
+namespace DomeGym.Domain.Common.Entities;
 
 public class Schedule
 {

@@ -1,33 +1,35 @@
+using DomeGym.Domain.Common;
+using DomeGym.Domain.Common.Entities;
+using DomeGym.Domain.SessionAggregate;
 using ErrorOr;
+using OneOf.Types;
 
-namespace DomeGym.Domain;
+namespace DomeGym.Domain.RoomAggregate;
 
-public class Room
+public class Room : AggregateRoot
 {
     private readonly List<Guid> _sessionIds = new();
     private readonly int _maxDailySessions;
     private readonly Guid _gymId;
     private readonly Schedule _schedule = Schedule.Empty();
 
-    public Guid Id { get; }
-
     public Room(
         int maxDailySessions,
         Guid gymId,
         Schedule? schedule = null,
         Guid? id = null)
+        : base(id ?? Guid.NewGuid())
     {
         _maxDailySessions = maxDailySessions;
         _gymId = gymId;
         _schedule = schedule ?? Schedule.Empty();
-        Id = id ?? Guid.NewGuid();
     }
 
-    public ErrorOr<Success> ScheduleSession(Session session)
+    public ErrorOr<ErrorOr.Success> ScheduleSession(Session session)
     {
         if (_sessionIds.Any(id => id == session.Id))
         {
-            return Error.Conflict(description: "Session already exists in room");
+            return ErrorOr.Error.Conflict(description: "Session already exists in room");
         }
 
         if (_sessionIds.Count >= _maxDailySessions)
@@ -46,5 +48,4 @@ public class Room
 
         return Result.Success;
     }
-
 }

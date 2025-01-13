@@ -17,7 +17,7 @@ public class SessionTests
 
         // Act
         var reserveParticipant1Result = session.ReserveSpot(participant1);
-        var reserveParticipant2Result = session.ReserveSpot(participant2);
+        var reserveParticipant2Result = session.ReserveSpot(participant2); 
 
         // Assert
         reserveParticipant1Result.IsError.Should().BeFalse();
