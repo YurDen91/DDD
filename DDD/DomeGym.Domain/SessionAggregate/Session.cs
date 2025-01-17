@@ -1,4 +1,5 @@
 using DomeGym.Domain.Common;
+using DomeGym.Domain.Common.Interfaces;
 using DomeGym.Domain.Common.ValueObjects;
 using DomeGym.Domain.ParticipantAggregate;
 using ErrorOr;
