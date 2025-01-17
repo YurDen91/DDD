@@ -19,13 +19,57 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1CF78F72
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomeGym.Domain.UnitTests", "tests\DomeGym.Domain.UnitTests\DomeGym.Domain.UnitTests.csproj", "{BD84D434-D999-47C8-8E59-AD201E86B28E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requests", "Requests", "{7BFB0E33-5532-4B6C-89A3-9AE49A2383FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gyms", "Gyms", "{CE53A3DA-7879-42C0-B14B-F94BE3794DA3}"
+	ProjectSection(SolutionItems) = preProject
+		Requests\Gyms\CreateGym.http = Requests\Gyms\CreateGym.http
+		Requests\Gyms\ListGyms.http = Requests\Gyms\ListGyms.http
+		Requests\Gyms\ListSessions.http = Requests\Gyms\ListSessions.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Participants", "Participants", "{6261F58C-1115-4C60-BD9A-55503A4091AC}"
+	ProjectSection(SolutionItems) = preProject
+		Requests\Participants\CancelReservation.http = Requests\Participants\CancelReservation.http
+		Requests\Participants\CreateReservation.http = Requests\Participants\CreateReservation.http
+		Requests\Participants\ListParticipantSessions.http = Requests\Participants\ListParticipantSessions.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Profiles", "Profiles", "{F62457C7-C662-40B0-AFAC-31426FCA2F4F}"
+	ProjectSection(SolutionItems) = preProject
+		Requests\Profiles\CreateProfile.http = Requests\Profiles\CreateProfile.http
+		Requests\Profiles\ListProfiles.http = Requests\Profiles\ListProfiles.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reservations", "Reservations", "{8F8C41E8-9F27-49FD-B165-C45501AE89FA}"
+	ProjectSection(SolutionItems) = preProject
+		Requests\Reservations\CreateReservation.http = Requests\Reservations\CreateReservation.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rooms", "Rooms", "{C54D9A9B-2317-474C-81CD-6F0828DA740D}"
+	ProjectSection(SolutionItems) = preProject
+		Requests\Rooms\CreateRoom.http = Requests\Rooms\CreateRoom.http
+		Requests\Rooms\DeleteRoom.http = Requests\Rooms\DeleteRoom.http
+		Requests\Rooms\GetRoom.http = Requests\Rooms\GetRoom.http
+		Requests\Rooms\ListRooms.http = Requests\Rooms\ListRooms.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sessions", "Sessions", "{C7F42AE2-89C8-427F-A0E4-BEDFE3F0618E}"
+	ProjectSection(SolutionItems) = preProject
+		Requests\Sessions\CreateSession.http = Requests\Sessions\CreateSession.http
+		Requests\Sessions\GetSession.http = Requests\Sessions\GetSession.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Subscriptions", "Subscriptions", "{6AD23F46-0F52-4166-B939-FDACFF7A6B03}"
+	ProjectSection(SolutionItems) = preProject
+		Requests\Subscriptions\CreateSubscription.http = Requests\Subscriptions\CreateSubscription.http
+		Requests\Subscriptions\ListSubscriptions.http = Requests\Subscriptions\ListSubscriptions.http
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F4024310-F62C-4A75-AE6D-3CAE71EA39D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -53,6 +97,9 @@ Global
 		{BD84D434-D999-47C8-8E59-AD201E86B28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD84D434-D999-47C8-8E59-AD201E86B28E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F4024310-F62C-4A75-AE6D-3CAE71EA39D2} = {BE58094B-5007-4991-A8E2-7C8F0646C484}
 		{F8DA16DA-D46A-4AB7-AB5F-D8A264AE8C28} = {BE58094B-5007-4991-A8E2-7C8F0646C484}
@@ -60,5 +107,12 @@ Global
 		{3BB8ED61-B4E8-4757-B908-ADC43FC5FDE0} = {BE58094B-5007-4991-A8E2-7C8F0646C484}
 		{D90E5455-B6A2-4F9D-9EF0-F7A582FF907A} = {BE58094B-5007-4991-A8E2-7C8F0646C484}
 		{BD84D434-D999-47C8-8E59-AD201E86B28E} = {1CF78F72-5B91-4524-A7F4-E497BB617F66}
+		{CE53A3DA-7879-42C0-B14B-F94BE3794DA3} = {7BFB0E33-5532-4B6C-89A3-9AE49A2383FE}
+		{6261F58C-1115-4C60-BD9A-55503A4091AC} = {7BFB0E33-5532-4B6C-89A3-9AE49A2383FE}
+		{F62457C7-C662-40B0-AFAC-31426FCA2F4F} = {7BFB0E33-5532-4B6C-89A3-9AE49A2383FE}
+		{8F8C41E8-9F27-49FD-B165-C45501AE89FA} = {7BFB0E33-5532-4B6C-89A3-9AE49A2383FE}
+		{C54D9A9B-2317-474C-81CD-6F0828DA740D} = {7BFB0E33-5532-4B6C-89A3-9AE49A2383FE}
+		{C7F42AE2-89C8-427F-A0E4-BEDFE3F0618E} = {7BFB0E33-5532-4B6C-89A3-9AE49A2383FE}
+		{6AD23F46-0F52-4166-B939-FDACFF7A6B03} = {7BFB0E33-5532-4B6C-89A3-9AE49A2383FE}
 	EndGlobalSection
 EndGlobal
