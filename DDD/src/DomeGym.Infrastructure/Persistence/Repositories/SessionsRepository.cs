@@ -20,24 +20,20 @@ public class SessionsRepository : ISessionsRepository
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<Session?> GetByIdAsync(Guid id)
-    {
-        return await _dbContext.Sessions.FirstOrDefaultAsync(session => session.Id == id);
-    }
+    public Task<Session?> GetByIdAsync(Guid id)
+        => _dbContext.Sessions.FirstOrDefaultAsync(session => session.Id == id);
 
-    public async Task<List<Session>> ListByIdsAsync(
+    public Task<List<Session>> ListByIdsAsync(
         IReadOnlyList<Guid> sessionIds,
         DateTime? startDateTime = null,
         DateTime? endDateTime = null,
         List<SessionCategory>? categories = null)
-    {
-        return await _dbContext.Sessions
+        => _dbContext.Sessions
             .AsNoTracking()
             .Where(session => sessionIds.Contains(session.Id))
             .WhereBetweenDateAndTimes(startDateTime, endDateTime)
             .WhereOfCategory(categories)
             .ToListAsync();
-    }
 
     public async Task<List<Session>> ListByGymIdAsync(
         Guid gymId,
@@ -61,12 +57,10 @@ public class SessionsRepository : ISessionsRepository
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<List<Session>> ListByRoomIdAsync(Guid roomId)
-    {
-        return await _dbContext.Sessions
+    public Task<List<Session>> ListByRoomIdAsync(Guid roomId)
+        => _dbContext.Sessions
             .Where(session => session.RoomId == roomId)
             .ToListAsync();
-    }
 
     public async Task RemoveRangeAsync(List<Session> sessions)
     {

@@ -31,9 +31,7 @@ public class AdminsRepository : IAdminsRepository
     }
 
     public Task<Admin?> GetByIdAsync(Guid adminId)
-    {
-        return _dbContext.Admins.FirstOrDefaultAsync(admin => admin.Id == adminId);
-    }
+        => _dbContext.Admins.FirstOrDefaultAsync(admin => admin.Id == adminId);
 
     public async Task UpdateAsync(Admin admin)
     {

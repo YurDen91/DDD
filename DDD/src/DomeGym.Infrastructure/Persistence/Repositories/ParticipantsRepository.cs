@@ -22,10 +22,8 @@ public class ParticipantsRepository : IParticipantsRepository
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<Participant?> GetByIdAsync(Guid id)
-    {
-        return await _dbContext.Participants.FirstOrDefaultAsync(participant => participant.Id == id);
-    }
+    public Task<Participant?> GetByIdAsync(Guid id)
+        => _dbContext.Participants.FirstOrDefaultAsync(participant => participant.Id == id);
 
     public async Task<Profile?> GetProfileByUserIdAsync(Guid userId)
     {
@@ -36,12 +34,10 @@ public class ParticipantsRepository : IParticipantsRepository
         return participant is null ? null : new Profile(participant.Id, ProfileType.Participant);
     }
 
-    public async Task<List<Participant>> ListByIdsAsync(List<Guid> ids)
-    {
-        return await _dbContext.Participants
+    public Task<List<Participant>> ListByIdsAsync(List<Guid> ids)
+        => _dbContext.Participants
             .Where(participant => ids.Contains(participant.Id))
             .ToListAsync();
-    }
 
     public async Task UpdateAsync(Participant participant)
     {

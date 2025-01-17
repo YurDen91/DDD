@@ -19,18 +19,14 @@ public class RoomsRepository : IRoomsRepository
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<Room?> GetByIdAsync(Guid id)
-    {
-        return await _dbContext.Rooms.FirstOrDefaultAsync(room => room.Id == id);
-    }
+    public Task<Room?> GetByIdAsync(Guid id)
+        => _dbContext.Rooms.FirstOrDefaultAsync(room => room.Id == id);
 
-    public async Task<List<Room>> ListByGymIdAsync(Guid gymId)
-    {
-        return await _dbContext.Rooms
+    public Task<List<Room>> ListByGymIdAsync(Guid gymId)
+        => _dbContext.Rooms
             .AsNoTracking()
             .Where(room => room.GymId == gymId)
             .ToListAsync();
-    }
 
     public async Task RemoveAsync(Room room)
     {

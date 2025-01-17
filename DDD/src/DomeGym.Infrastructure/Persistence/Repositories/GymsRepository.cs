@@ -22,22 +22,16 @@ public class GymsRepository : IGymsRepository
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<bool> ExistsAsync(Guid id)
-    {
-        return await _dbContext.Gyms.AsNoTracking().AnyAsync(gym => gym.Id == id);
-    }
+    public Task<bool> ExistsAsync(Guid id)
+        => _dbContext.Gyms.AsNoTracking().AnyAsync(gym => gym.Id == id);
 
-    public async Task<Gym?> GetByIdAsync(Guid id)
-    {
-        return await _dbContext.Gyms.FirstOrDefaultAsync(gym => gym.Id == id);
-    }
+    public Task<Gym?> GetByIdAsync(Guid id)
+        => _dbContext.Gyms.FirstOrDefaultAsync(gym => gym.Id == id);
 
-    public async Task<List<Gym>> ListSubscriptionGymsAsync(Guid subscriptionId)
-    {
-        return await _dbContext.Gyms
+    public Task<List<Gym>> ListSubscriptionGymsAsync(Guid subscriptionId)
+        => _dbContext.Gyms
             .Where(gym => gym.SubscriptionId == subscriptionId)
             .ToListAsync();
-    }
 
     public async Task UpdateAsync(Gym gym)
     {

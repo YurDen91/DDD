@@ -21,10 +21,8 @@ public class TrainersRepository : ITrainersRepository
         await _dbContext.SaveChangesAsync();
     }
 
-    public async Task<Trainer?> GetByIdAsync(Guid trainerId)
-    {
-        return await _dbContext.Trainers.FirstOrDefaultAsync(trainer => trainer.Id == trainerId);
-    }
+    public Task<Trainer?> GetByIdAsync(Guid trainerId)
+        => _dbContext.Trainers.FirstOrDefaultAsync(trainer => trainer.Id == trainerId);
 
     public async Task<Profile?> GetProfileByUserIdAsync(Guid userId)
     {
