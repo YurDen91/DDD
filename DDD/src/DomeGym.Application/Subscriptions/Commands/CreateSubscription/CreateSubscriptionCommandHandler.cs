@@ -38,7 +38,6 @@ public class CreateSubscriptionCommandHandler : IRequestHandler<CreateSubscripti
         admin.SetSubscription(subscription);
 
         await _adminsRepository.UpdateAsync(admin);
-        await _subscriptionsRepository.AddSubscriptionAsync(subscription);
 
         return subscription;
     }

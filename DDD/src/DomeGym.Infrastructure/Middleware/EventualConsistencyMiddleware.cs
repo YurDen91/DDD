@@ -10,7 +10,12 @@ public class EventualConsistencyMiddleware
     public const string DomainEventsKey = "DomainEventsKey";
     
     private readonly RequestDelegate _next;
-    
+
+    public EventualConsistencyMiddleware(RequestDelegate next)
+    {
+        _next = next;
+    }
+
     public async Task InvokeAsync(HttpContext context, IPublisher publisher, DomeGymDbContext dbContext)
     {
         var transaction = await dbContext.Database.BeginTransactionAsync();
