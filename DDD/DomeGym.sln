@@ -20,6 +20,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomeGym.Domain.UnitTests", "tests\DomeGym.Domain.UnitTests\DomeGym.Domain.UnitTests.csproj", "{BD84D434-D999-47C8-8E59-AD201E86B28E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requests", "Requests", "{7BFB0E33-5532-4B6C-89A3-9AE49A2383FE}"
+	ProjectSection(SolutionItems) = preProject
+		Requests\environment.json = Requests\environment.json
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gyms", "Gyms", "{CE53A3DA-7879-42C0-B14B-F94BE3794DA3}"
 	ProjectSection(SolutionItems) = preProject

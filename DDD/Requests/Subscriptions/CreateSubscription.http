@@ -1,3 +1,6 @@
+@host = http://localhost:5051
+@adminId = FC04CADA-F64F-412F-9602-E7A91B586924
+
 POST {{host}}/subscriptions
 Content-Type: application/json
 

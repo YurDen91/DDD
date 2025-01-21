@@ -1,1 +1,2 @@
+@host = http://localhost:5051
 GET {{host}}/gyms/{{gymId}}/rooms

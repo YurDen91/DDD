@@ -1,3 +1,4 @@
+@host = http://localhost:5051
 POST {{host}}/rooms/{{roomId2}}/sessions
 Content-Type: application/json
 

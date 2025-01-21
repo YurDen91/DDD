@@ -1,1 +1,3 @@
+// define host variable
+@host = http://localhost:5051
 GET {{host}}/subscriptions

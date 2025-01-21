@@ -1,3 +1,4 @@
+@host = http://localhost:5051
 POST {{host}}/subscriptions/{{subscriptionId}}/gyms
 Content-Type: application/json
 

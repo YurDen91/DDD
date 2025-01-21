@@ -1,3 +1,4 @@
+@host = http://localhost:5051
 ### Admin
 POST {{host}}/users/{{userId}}/profiles
 Content-Type: application/json
